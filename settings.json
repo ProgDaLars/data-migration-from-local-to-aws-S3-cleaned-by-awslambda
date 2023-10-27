@@ -1,0 +1,15 @@
+
+{
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveDelay": 100,
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    "editor.wordWrap": "on",
+    "eslint.validate": ["python"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    //"editor.formatOnSaveMode": "modifications", //this formats only modified code and exxcludes legacy codes
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true
+  }
+  

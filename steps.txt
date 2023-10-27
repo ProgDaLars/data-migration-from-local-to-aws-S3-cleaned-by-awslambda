@@ -1,0 +1,25 @@
+1.  Configure AWS credentials using AWS Secret key and Access key
+
+2.  Create S3 bucket in the CLI after logging in with the credentials, using "aws s3 mb s3://[unique-bucket-name]" command
+
+3.  Write the python codes to copy all csv files from the local directory to S3 bucket
+
+4.  Run the script by typing "python [script_name].py"
+
+5.  Go to IAM, search for roles, create json role (policy) and save
+
+6.  Create the lambda function to use for transformation and cleaning on the fly (add necessary policy). You need an AWS Python layer for this
+
+7.  Create a clean version of the uploaded dataset on the fly, use pandas [You need to add a layer to achieve this]
+
+8.  Create a json version of the clean dataset
+
+9. Upload clean csv and json to S3 bucket
+
+10. Create a dynamodb table (in IAM or via CLI), I used CLI, see below:
+
+    aws dynamodb create-table --table-name cleaned_hotel_bookings --attribute-definitions AttributeName=hotel,AttributeType=S AttributeName=arrival_date,AttributeType=S --key-schema AttributeName=hotel,KeyType=HASH AttributeName=arrival_date,KeyType=RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --region us-east-1
+
+NOTE:   Use schema that results in UNIQUE Attributes, this varies with dataset, if you don't, your table rows could be overwritten by new entries
+
+Hotel Data source: https://www.kaggle.com/code/ainurrohmanbwx/hotel-booking-analytics
