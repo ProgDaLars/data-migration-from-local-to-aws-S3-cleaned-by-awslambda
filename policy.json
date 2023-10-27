@@ -1,0 +1,42 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"logs:CreateLogGroup",
+				"logs:CreateLogStream",
+				"logs:PutLogEvents"
+			],
+			"Resource": "arn:aws:logs:*:*:*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject",
+				"s3:PutObject"
+			],
+			"Resource": [
+				"arn:aws:s3:::practice-datasets/*"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"dynamodb:PutItem",
+				"dynamodb:GetItem",
+				"dynamodb:UpdateItem"
+			],
+			"Resource": [
+				"arn:aws:dynamodb:us-east-2:264948725594:table/cleaned_hotel_bookings"
+			]
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"rekognition:IndexFaces"
+			],
+			"Resource": "*"
+		}
+	]
+}
