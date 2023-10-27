@@ -33,7 +33,11 @@ Data Ingestion: The core of the project is the development of a Python script to
    
 **Technologies Used:**
 AWS (Amazon Web Services)
+
 S3 Bucket
+
 DynamoDB
+
 Python
+
 Boto3 (AWS SDK for Python)
