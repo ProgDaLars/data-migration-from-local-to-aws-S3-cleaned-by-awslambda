@@ -38,3 +38,5 @@ Data Ingestion: The core of the project is the development of a Python script to
 - DynamoDB
 - Python
 - Boto3 (AWS SDK for Python)
+
+Data source: https://www.kaggle.com/code/ainurrohmanbwx/hotel-booking-analytics
