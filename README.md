@@ -7,12 +7,12 @@ DynamoDB is a fully managed, highly available, and scalable NoSQL database servi
 
 The project involves the use of Python and the Boto3 library to interact with AWS services.
 
-**Project AIM**
+**Project Aim**
 
 To scan specified directory for csv dataset, upload to S3, clean and transform dataset on the fly in AWS lambda function, upload two versions (csv and json) of the cleaned data into clean_datasets/ folder in S3 bucket and store the clean data into Amazon Dynamo DB
 
 
-**Project Objectives:**
+**Project Objectives**
 
 Data Source: The project begins with a structured dataset containing information related to hotel bookings. The dataset consists of various attributes such as hotel name, booking status, lead time, arrival date, guest information and more. The primary objective is to take this dataset, clean and transform it on the fly in AWS lambda function, store the cleaned version to S3 and also store it efficiently in DynamoDB.
 
